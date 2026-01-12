@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUR BANK</title>
+    <link rel="stylesheet" href="Bank.css">
+</head>
+<body>
+    <div id="BankContainer">
+        <div id="MainContent">
+            <div id="MainHeading"><h1>MINI BANK</h1>
+                <h5>Manage Your Finances</h5>
+            </div>
+            <div id="AccountInfo">
+                <input type="text" placeholder="Username" id="UsernameInput"><br>
+                <button id="checkBalance" onclick="CheckBal()">Check Balance</button><br>
+                <button id="Deposit" onclick="Deposit()">Deposit</button><br>
+                <button id="Withdraw" onclick="Withdraw()">Withdraw</button><br>
+                <div id="BalanceDisplay">Balance: $0.00</div><br>
+
+            </div>
+            <h3 id="Madeby">Made with ❤️ by Anish</h3>
+        </div>
+    </div>
+    <script src="Bank.js"></script>
+</body>
+</html>

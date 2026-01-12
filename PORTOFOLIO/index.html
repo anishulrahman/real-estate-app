@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Portfolio</title>
+  <style>
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body, h1, h2, h3, p, ul, li, a {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+    }
+    body {
+      background: #f9fafb;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    nav .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #007BFF;
+      cursor: default;
+      user-select: none;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #007BFF;
+    }
+
+    /* Header / Hero */
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: linear-gradient(135deg, #007BFF 0%, #00D4FF 100%);
+      color: #fff;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+      opacity: 0.9;
+    }
+
+    /* Sections container */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Section Titles */
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #007BFF;
+      padding-bottom: 8px;
+      font-weight: 700;
+      color: #007BFF;
+    }
+
+    /* About */
+    #about p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    /* Skills */
+    #skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    #skills li {
+      background: #007BFF;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      user-select: none;
+      box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+    #skills li:hover {
+      background: #0056b3;
+      box-shadow: 0 6px 12px rgba(0,86,179,0.6);
+    }
+
+    /* Projects */
+    #projects .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    #projects .project {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    #projects .project:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    #projects .project h3 {
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+    #projects .project p {
+      color: #555;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    #projects .project a {
+      color: #007BFF;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    #projects .project a:hover {
+      border-color: #007BFF;
+    }
+
+    /* Contact */
+    #contact p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #999;
+      font-size: 0.9rem;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      nav ul {
+        gap: 15px;
+      }
+      #skills ul {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="logo">ANISH</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Hi, I'm Your ANISH</h1>
+    <p>Passionate Web Developer & Designer creating beautiful, performant websites.</p>
+  </header>
+
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>
+      I am a self-motivated developer who loves to craft clean and efficient code. Experienced in
+      front-end and back-end technologies, I build scalable and responsive web applications.
+      I am always eager to learn new skills and take on new challenges.
+    </p>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <ul id="skills-list">
+      <!-- Skills will be injected by JS -->
+    </ul>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project-list" id="project-list">
+      <!-- Projects will be injected by JS -->
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:your.email@example.com">aulrahman942@gmail.com</a></p>
+    <p>Phone: +123 456 7890</p>
+  </section>
+
+  <footer>
+    &copy; 2025 ANISH. All rights reserved.
+  </footer>
+
+  <script>
+    // Data arrays
+    const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Python', 'Git', 'SQL'];
+
+    const projects = [
+      {
+        title: 'Portfolio Website',
+        description: 'A modern responsive portfolio website built with HTML, CSS, and JavaScript.',
+        link: '#'
+      },
+      {
+        title: 'Todo List App',
+        description: 'A simple todo list app with local storage and user-friendly UI.',
+        link: '#'
+      },
+      {
+        title: 'Weather App',
+        description: 'Real-time weather app using OpenWeather API and vanilla JavaScript.',
+        link: '#'
+      }
+    ];
+
+    // Render skills
+    const skillsList = document.getElementById('skills-list');
+    skills.forEach(skill => {
+      const li = document.createElement('li');
+      li.textContent = skill;
+      skillsList.appendChild(li);
+    });
+
+    // Render projects
+    const projectList = document.getElementById('project-list');
+    projects.forEach(proj => {
+      const projectDiv = document.createElement('div');
+      projectDiv.className = 'project';
+
+      projectDiv.innerHTML = `
+        <h3>${proj.title}</h3>
+        <p>${proj.description}</p>
+        <a href="${proj.link}" target="_blank" rel="noopener">View Project</a>
+      `;
+
+      projectList.appendChild(projectDiv);
+    });
+  </script>
+
+</body>
+</html>
